@@ -1,10 +1,93 @@
-let valorWons = prompt("Digite um valor em wons:");
+*/Código HTML
+<body>
+  <img src="https://i.postimg.cc/GpCxYmvc/title.png" alt="Logo" class="logo">
 
-let taxaWonParaReal = 0.0040;
-let taxaWonParaDolar = 0.00075;
+  <div class="container">
+    <div class="content">
+      <h2>Conversão de moedas!</h2>
+      <p> Quer saber quanto o real tá desvalorizado?</p>
+      <button onclick="conversor()">Bora Converter!</button>
+    </div>
+  </div>
+  <footer>Dani - DEV - 2025</footer>
+</body>
 
-let valorEmReais = valorWons * taxaWonParaReal;
-let valorEmDolares = valorWons * taxaWonParaDolar;
+then
+*/Código CSS
+/* Global Styles */
+body {
+  background-image: url('https://img.freepik.com/premium-vector/abstract-digital-circle-hologram-money-transfer-defi-decentralized-finance-blockchain-cryptocurrency_36402-885.jpg?w=826'); /* URL da imagem */
+  background-repeat:  no-repeat;
+  background-size: cover; /* Ajusta a imagem para caber no espaço disponível */
+  background-position: center; /* Centraliza a imagem */
+  margin: 0;
+  padding: 0;
+}
 
-alert("R$ " + valorEmReais.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+/* Logo Styles */
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 150px;
+  width: auto;
+}
+
+/* Container with the background image */
+.container {
+  background-image: url("https://img.freepik.com/premium-vector/abstract-digital-circle-hologram-money-transfer-defi-decentralized-finance-blockchain-cryptocurrency_36402-885.jpg?w=826") repeat center center/cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content div for text and button */
+.content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 8px;
+  color: white;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+  background-color: #ff1b7b;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1ABC9C;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  color:white;
+}
+then
+*/ Código JavaScript
+let valorReais = prompt("Digite um valor em reais:");
+
+let taxaRealParaDolar = 5.70; // Exemplo: 1 real = 5.70 dólares
+let taxaRealParaEuro = 6.17;
+
+// Realiza as conversões
+let valorEmDolares = valorReais * taxaRealParaDolar;
+let valorEmEuros = valorReais * taxaRealParaEuro;
+
+// Exibe os resultados formatados
 alert("US$ " + valorEmDolares.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+alert("€ " + valorEmEuros.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
