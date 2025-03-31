@@ -1,0 +1,10 @@
+let valorWons = prompt("Digite um valor em wons:");
+
+let taxaWonParaReal = 0.0040;
+let taxaWonParaDolar = 0.00075;
+
+let valorEmReais = valorWons * taxaWonParaReal;
+let valorEmDolares = valorWons * taxaWonParaDolar;
+
+alert("R$ " + valorEmReais.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+alert("US$ " + valorEmDolares.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
