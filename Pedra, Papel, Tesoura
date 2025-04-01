@@ -1,0 +1,50 @@
+CÓDIGO JAVASCRIPT
+function jogar() {
+  let idade = prompt("Quantos anos você tem?");
+  if (idade < 18) {
+    alert("Você NÃO pode jogar.");
+  }
+
+  if (idade >= 18) {
+    opcao = prompt("Digite 1-Pedra, 2-Papel ou 3-Tesoura:");
+    computador = Math.floor(Math.random() * 3) + 1;
+
+    if (opcao == computador) {
+      alert("Empate!");
+    }
+    if (opcao == 1) {
+      if (computador == 2) {
+        // Opção Pedra, Computador Papel
+        alert("Computador venceu, escolheu papel!");
+      }
+      if (computador == 3) {
+        // Opção Pedra, Computador Tesoura
+        alert("Jogador vence, computador escolheu Tesoura.");
+      }
+    }
+
+    if (opcao == 2) {
+      if (computador == 1) {
+        // Opção Papel, Computador Pedra --> Jogador vence
+        alert("Jogador venceu, Computador escolheu Pedra.");
+      }
+      if (computador == 3) {
+        // Opção Papel, Computador Tesoura --> Computador vence
+        alert("Computador venceu, escolheu Tesoura!");
+      }
+    }
+
+    if (opcao == 3) {
+      if (computador == 1) {
+        // Opção Tesoura, Computador Pedra --> Computador vence!
+        alert("Computador venceu, escolheu Pedra!");
+      }
+      if (computador == 2) {
+        // Opção Tesoura, Computador Papel --> Jogador vence
+        alert("Jogador venceu!!!");
+      }
+    }
+    alert("Computador escolheu: " + computador);
+  }
+  jogar();
+}
